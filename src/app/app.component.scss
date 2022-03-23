@@ -1,0 +1,16 @@
+@import "../assets/styles/index.scss";
+
+.body-holder {
+  @include open-sans-100;
+  display: flex;
+  justify-content: flex-start;
+  width: $full-size;
+  min-height: calc(100vh - 60px);
+}
+
+.content-holder {
+  min-height: $full-size;
+  background-color: $light;
+  width: $full-size;
+  padding: $layout-size-xxxl;
+}

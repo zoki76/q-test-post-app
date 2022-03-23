@@ -1,0 +1,24 @@
+@import "../../../../assets/styles/index.scss";
+
+.filter-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: $layout-size-xxl;
+
+  .search-icon {
+    background-color: #ccc;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: $q-app-color;
+    font-size: $font-s;
+    padding: $layout-size-l $layout-size-xl;
+  }
+
+  .form-control {
+    width: $full-size;
+    padding: $layout-size-l;
+    font-size: $font-xl;
+    border: 1px solid black;
+  }
+}

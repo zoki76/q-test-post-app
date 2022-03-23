@@ -1,0 +1,17 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let config of gridConfig">{{ config.title }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let item of items | gridFilter: filter"
+      (click)="onRowClick(item)"
+    >
+      <td *ngFor="let config of gridConfig">
+        {{ item[config.key] }}
+      </td>
+    </tr>
+  </tbody>
+</table>

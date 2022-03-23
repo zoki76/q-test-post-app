@@ -1,0 +1,26 @@
+@import "../../../../assets/styles/index.scss";
+$q-header-height: 60px;
+$q-img-length: 40px;
+
+.q-header {
+  background-color: $q-app-color;
+  @include flex-start-align-center;
+  height: $q-header-height;
+
+  .title-area {
+    width: $side-menu-width;
+    @include flex-start-align-center;
+    color: $light;
+
+    .q-img {
+      width: $q-img-length;
+      height: $q-img-length;
+      margin: 0 $layout-size-xl;
+    }
+
+    .header-title {
+      @include open-sans-100;
+      font-size: $font-huge;
+    }
+  }
+}

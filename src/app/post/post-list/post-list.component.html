@@ -1,0 +1,6 @@
+<q-filter></q-filter>
+<q-grid
+  [items]="postListItems"
+  [gridConfig]="gridPostsConfig"
+  (rowClicked)="getPostResult($event)"
+></q-grid>

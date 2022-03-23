@@ -1,0 +1,15 @@
+<section class="q-side-menu">
+  <ul class="nav">
+    <li
+      *ngFor="let item of menuItems"
+      class="menu-item"
+      [routerLink]="[item.route]"
+      routerLinkActive="is-active"
+    >
+      <span class="menu-icon">
+        <fa-icon [icon]="item.icon" size="lg"></fa-icon>
+      </span>
+      <span>{{ item.title }}</span>
+    </li>
+  </ul>
+</section>

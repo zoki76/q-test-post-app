@@ -1,0 +1,38 @@
+@import "../../../../assets/styles/index.scss";
+$menu-icon-width: 50px;
+$menu-item-border-radius: 4px;
+
+.q-side-menu {
+  min-height: $full-size;
+  background-color: $q-app-color;
+  width: $side-menu-width;
+
+  .nav {
+    padding-top: $layout-size-xl;
+    margin: 0 $layout-size-xl;
+  }
+
+  .menu-item {
+    color: $light;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    border-radius: $menu-item-border-radius;
+    padding: $layout-size-xl $layout-size-xl;
+    font-size: $font-xxl;
+    cursor: pointer;
+    margin-bottom: $layout-size-xl;
+
+    &:hover,
+    &.is-active {
+      color: $q-app-color;
+      background-color: $light;
+    }
+  }
+
+  .menu-icon {
+    width: $menu-icon-width;
+    text-align: center;
+  }
+}

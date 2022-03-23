@@ -1,0 +1,14 @@
+<form [formGroup]="filterForm">
+  <div class="filter-container">
+    <div class="search-icon">
+      <fa-icon [icon]="icons.faSearch" class="menu-icon"></fa-icon>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      name="searchString"
+      placeholder="Type to search..."
+      formControlName="filterValue"
+    />
+  </div>
+</form>

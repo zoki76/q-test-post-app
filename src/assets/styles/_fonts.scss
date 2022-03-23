@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+
+@mixin open-sans-100 {
+  font-family: "Open Sans", serif;
+  font-weight: 100;
+}
+
+$font-s: 13px;
+$font-l: 14px;
+$font-xl: 16px;
+$font-xxl: 18px;
+$font-huge: 25px;
