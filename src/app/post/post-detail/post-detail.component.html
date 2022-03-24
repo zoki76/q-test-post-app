@@ -1,1 +1,13 @@
-<p>post-detail works!</p>
+<article>
+  <section class="post">
+    <h1>{{ this.post.title }}</h1>
+    <h3>Author: {{ this.post.user.name }}</h3>
+    <p>{{ this.post.body }}</p>
+  </section>
+  <h3>Comments:</h3>
+  <section *ngFor="let comment of post.comments" class="comments">
+    <h4>{{ comment.name }}</h4>
+    <h5>{{ comment.email }}</h5>
+    <p>{{ comment.body }}</p>
+  </section>
+</article>

@@ -1,0 +1,26 @@
+@import "../../../assets/styles/index.scss";
+$comments-background-color: rgb(240, 240, 240);
+$comments-border-radius: 4px;
+
+h1:first-letter,
+h2:first-letter,
+h3:first-letter,
+h4:first-letter,
+p {
+  text-transform: capitalize;
+}
+
+h5:first-letter {
+  text-transform: lowercase;
+}
+
+.post {
+  margin-bottom: $layout-size-xxl;
+}
+
+.comments {
+  background-color: $comments-background-color;
+  padding: $layout-size-xxl;
+  margin-bottom: $layout-size-l;
+  border-radius: $comments-border-radius;
+}

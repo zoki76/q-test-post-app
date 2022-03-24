@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { UserPostService } from './services/user-post.service';
+import { PostDetailService } from './services/post-detail.service';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
   {
     path: ':id',
     component: PostDetailComponent,
-    resolve: { postListItems: UserPostService },
+    resolve: { post: PostDetailService },
   },
   {
     path: '',
