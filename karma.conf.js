@@ -2,10 +2,10 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 const path = require("path");
 const DEFAULT_GLOBAL_THRESHOLDS = {
-  statements: 67,
-  branches: 38,
-  functions: 55,
-  lines: 67,
+  statements: 80,
+  branches: 80,
+  functions: 80,
+  lines: 80,
 };
 module.exports = function (config) {
   config.set({
