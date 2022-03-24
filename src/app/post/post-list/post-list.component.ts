@@ -39,6 +39,6 @@ export class PostListComponent implements OnInit {
   }
 
   getPostResult(item: PostListModel) {
-    this.router.navigate([`post/${item.id}`]);
+    this.router.navigate([`post`, item.id]);
   }
 }

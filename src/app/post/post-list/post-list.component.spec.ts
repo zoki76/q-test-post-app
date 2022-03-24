@@ -1,12 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterService } from '@shared/services';
 import { FilterComponent } from 'src/app/shared/components/filter/filter.component';
 import { GridComponent } from 'src/app/shared/components/grid/grid.component';
 import { GridFilterPipe } from 'src/app/shared/pipes/grid-filter.pipe';
+import { PostListModel } from '../models/post.model';
 import { PostListComponent } from './post-list.component';
+
+let router = {
+  navigate: jasmine.createSpy('navigate'),
+};
 
 const resolverDataMock = [
   {
@@ -48,6 +53,7 @@ describe('PostListComponent', () => {
       ],
       providers: [
         FilterService,
+        { provide: Router, useValue: router },
         {
           provide: ActivatedRoute,
           useValue: {
@@ -68,5 +74,10 @@ describe('PostListComponent', () => {
 
   it('should create', () => {
     expect(component.postListItems).toEqual(resolverDataMock);
+  });
+
+  it('should navigate to post route with id 7', () => {
+    component.getPostResult({ id: 7 } as PostListModel);
+    expect(router.navigate).toHaveBeenCalledWith(['post', 7]);
   });
 });
